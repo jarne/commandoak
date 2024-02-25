@@ -10,7 +10,7 @@ import SwiftData
 struct CommandoakApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Command.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -23,7 +23,7 @@ struct CommandoakApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CommandsView()
         }
         .modelContainer(sharedModelContainer)
     }

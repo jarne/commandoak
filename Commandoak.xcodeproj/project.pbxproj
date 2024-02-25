@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */; };
-		8B50B1E92B8B8084006CBF57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E82B8B8084006CBF57 /* ContentView.swift */; };
-		8B50B1EB2B8B8084006CBF57 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1EA2B8B8084006CBF57 /* Item.swift */; };
+		8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E82B8B8084006CBF57 /* CommandsView.swift */; };
+		8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1EA2B8B8084006CBF57 /* Command.swift */; };
 		8B50B1ED2B8B8085006CBF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */; };
 		8B50B1F02B8B8085006CBF57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */; };
+		8B50B1FA2B8B93FA006CBF57 /* CommandDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B50B1E32B8B8084006CBF57 /* Commandoak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commandoak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandoakApp.swift; sourceTree = "<group>"; };
-		8B50B1E82B8B8084006CBF57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8B50B1EA2B8B8084006CBF57 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8B50B1E82B8B8084006CBF57 /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
+		8B50B1EA2B8B8084006CBF57 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B50B1F12B8B8085006CBF57 /* Commandoak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Commandoak.entitlements; sourceTree = "<group>"; };
+		8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */,
-				8B50B1E82B8B8084006CBF57 /* ContentView.swift */,
-				8B50B1EA2B8B8084006CBF57 /* Item.swift */,
+				8B50B1E82B8B8084006CBF57 /* CommandsView.swift */,
+				8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */,
+				8B50B1EA2B8B8084006CBF57 /* Command.swift */,
 				8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */,
 				8B50B1F12B8B8085006CBF57 /* Commandoak.entitlements */,
 				8B50B1EE2B8B8085006CBF57 /* Preview Content */,
@@ -142,9 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B50B1E92B8B8084006CBF57 /* ContentView.swift in Sources */,
-				8B50B1EB2B8B8084006CBF57 /* Item.swift in Sources */,
+				8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */,
+				8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */,
 				8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */,
+				8B50B1FA2B8B93FA006CBF57 /* CommandDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

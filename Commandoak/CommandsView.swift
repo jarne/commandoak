@@ -6,18 +6,20 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct CommandsView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    
+    @Query private var commands: [Command]
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(commands) { cmd in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        CommandDetailView(cmd: cmd)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(cmd.icon)
+                        Text(cmd.name)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -37,7 +39,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Command()
             modelContext.insert(newItem)
         }
     }
@@ -45,13 +47,13 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(commands[index])
             }
         }
     }
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+    CommandsView()
+        .modelContainer(for: Command.self, inMemory: true)
 }
