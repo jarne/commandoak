@@ -26,7 +26,7 @@ struct CommandoakApp: App {
             CommandsView()
         }
         .modelContainer(sharedModelContainer)
-        MenuBarExtra("Commandoak") {
+        MenuBarExtra("Commandoak", systemImage: "command") {
             CommandsMenuBarView()
                 .modelContainer(sharedModelContainer)
         }
