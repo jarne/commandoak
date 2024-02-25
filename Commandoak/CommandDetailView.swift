@@ -2,8 +2,6 @@
 //  CommandDetailView.swift
 //  Commandoak
 //
-//  Created by Jarne Jost on 25.02.24.
-//
 
 import SwiftUI
 

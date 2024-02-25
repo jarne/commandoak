@@ -13,6 +13,7 @@
 		8B50B1ED2B8B8085006CBF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */; };
 		8B50B1F02B8B8085006CBF57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */; };
 		8B50B1FA2B8B93FA006CBF57 /* CommandDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */; };
+		8B50B2022B8BABD7006CBF57 /* CommandsMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B2012B8BABD7006CBF57 /* CommandsMenuBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B50B1F12B8B8085006CBF57 /* Commandoak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Commandoak.entitlements; sourceTree = "<group>"; };
 		8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDetailView.swift; sourceTree = "<group>"; };
+		8B50B2012B8BABD7006CBF57 /* CommandsMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsMenuBarView.swift; sourceTree = "<group>"; };
+		8B50B2032B8BB4DC006CBF57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,11 @@
 		8B50B1E52B8B8084006CBF57 /* Commandoak */ = {
 			isa = PBXGroup;
 			children = (
+				8B50B2032B8BB4DC006CBF57 /* Info.plist */,
 				8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */,
 				8B50B1E82B8B8084006CBF57 /* CommandsView.swift */,
 				8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */,
+				8B50B2012B8BABD7006CBF57 /* CommandsMenuBarView.swift */,
 				8B50B1EA2B8B8084006CBF57 /* Command.swift */,
 				8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */,
 				8B50B1F12B8B8085006CBF57 /* Commandoak.entitlements */,
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B50B2022B8BABD7006CBF57 /* CommandsMenuBarView.swift in Sources */,
 				8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */,
 				8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */,
 				8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */,
@@ -287,6 +293,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Commandoak/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Execute user-specified commands in the Terminal app";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,6 +323,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Commandoak/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Execute user-specified commands in the Terminal app";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

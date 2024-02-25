@@ -8,7 +8,6 @@ import SwiftData
 
 struct CommandsView: View {
     @Environment(\.modelContext) private var modelContext
-    
     @Query private var commands: [Command]
 
     var body: some View {
@@ -28,12 +27,12 @@ struct CommandsView: View {
             .toolbar {
                 ToolbarItem {
                     Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                        Label("Add command", systemImage: "plus")
                     }
                 }
             }
         } detail: {
-            Text("Select an item")
+            Text("Select a command to edit or create a new one")
         }
     }
 
