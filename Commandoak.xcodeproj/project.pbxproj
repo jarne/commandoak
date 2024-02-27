@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B2A59A72B8E5E9C00C2CAAF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A59A62B8E5E9C00C2CAAF /* SettingsView.swift */; };
+		8B2A59B52B8E72A700C2CAAF /* CommandoakLoginHelperAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A59B42B8E72A700C2CAAF /* CommandoakLoginHelperAppDelegate.swift */; };
+		8B2A59B92B8E72A800C2CAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2A59B82B8E72A800C2CAAF /* Assets.xcassets */; };
+		8B2A59BC2B8E72A800C2CAAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2A59BB2B8E72A800C2CAAF /* Preview Assets.xcassets */; };
+		8B2A59C22B8E769E00C2CAAF /* CommandoakLoginHelper.app in Copy Login Helper */ = {isa = PBXBuildFile; fileRef = 8B2A59B22B8E72A700C2CAAF /* CommandoakLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8B2A59C42B8E783300C2CAAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A59C32B8E783300C2CAAF /* main.swift */; };
 		8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */; };
 		8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E82B8B8084006CBF57 /* CommandsView.swift */; };
 		8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1EA2B8B8084006CBF57 /* Command.swift */; };
@@ -16,7 +22,28 @@
 		8B50B2022B8BABD7006CBF57 /* CommandsMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B2012B8BABD7006CBF57 /* CommandsMenuBarView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8B2A59C12B8E767900C2CAAF /* Copy Login Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				8B2A59C22B8E769E00C2CAAF /* CommandoakLoginHelper.app in Copy Login Helper */,
+			);
+			name = "Copy Login Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8B2A59A62B8E5E9C00C2CAAF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8B2A59B22B8E72A700C2CAAF /* CommandoakLoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandoakLoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2A59B42B8E72A700C2CAAF /* CommandoakLoginHelperAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandoakLoginHelperAppDelegate.swift; sourceTree = "<group>"; };
+		8B2A59B82B8E72A800C2CAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B2A59BB2B8E72A800C2CAAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B2A59BD2B8E72A800C2CAAF /* CommandoakLoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommandoakLoginHelper.entitlements; sourceTree = "<group>"; };
+		8B2A59C32B8E783300C2CAAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8B50B1E32B8B8084006CBF57 /* Commandoak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commandoak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandoakApp.swift; sourceTree = "<group>"; };
 		8B50B1E82B8B8084006CBF57 /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
@@ -30,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B2A59AF2B8E72A700C2CAAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B50B1E02B8B8084006CBF57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +74,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B2A59A32B8E5E4800C2CAAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B50B1EA2B8B8084006CBF57 /* Command.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B2A59A42B8E5E5200C2CAAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A59A52B8E5E7D00C2CAAF /* Menu */,
+				8B50B1E82B8B8084006CBF57 /* CommandsView.swift */,
+				8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */,
+				8B2A59A62B8E5E9C00C2CAAF /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B2A59A52B8E5E7D00C2CAAF /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8B50B2012B8BABD7006CBF57 /* CommandsMenuBarView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8B2A59B32B8E72A700C2CAAF /* CommandoakLoginHelper */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A59C32B8E783300C2CAAF /* main.swift */,
+				8B2A59B42B8E72A700C2CAAF /* CommandoakLoginHelperAppDelegate.swift */,
+				8B2A59B82B8E72A800C2CAAF /* Assets.xcassets */,
+				8B2A59BD2B8E72A800C2CAAF /* CommandoakLoginHelper.entitlements */,
+				8B2A59BA2B8E72A800C2CAAF /* Preview Content */,
+			);
+			path = CommandoakLoginHelper;
+			sourceTree = "<group>";
+		};
+		8B2A59BA2B8E72A800C2CAAF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A59BB2B8E72A800C2CAAF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		8B50B1DA2B8B8084006CBF57 = {
 			isa = PBXGroup;
 			children = (
 				8B50B1E52B8B8084006CBF57 /* Commandoak */,
+				8B2A59B32B8E72A700C2CAAF /* CommandoakLoginHelper */,
 				8B50B1E42B8B8084006CBF57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8B50B1E32B8B8084006CBF57 /* Commandoak.app */,
+				8B2A59B22B8E72A700C2CAAF /* CommandoakLoginHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,11 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				8B50B2032B8BB4DC006CBF57 /* Info.plist */,
+				8B2A59A32B8E5E4800C2CAAF /* Model */,
+				8B2A59A42B8E5E5200C2CAAF /* View */,
 				8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */,
-				8B50B1E82B8B8084006CBF57 /* CommandsView.swift */,
-				8B50B1F92B8B93FA006CBF57 /* CommandDetailView.swift */,
-				8B50B2012B8BABD7006CBF57 /* CommandsMenuBarView.swift */,
-				8B50B1EA2B8B8084006CBF57 /* Command.swift */,
 				8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */,
 				8B50B1F12B8B8085006CBF57 /* Commandoak.entitlements */,
 				8B50B1EE2B8B8085006CBF57 /* Preview Content */,
@@ -83,6 +164,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8B2A59B12B8E72A700C2CAAF /* CommandoakLoginHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2A59C02B8E72A800C2CAAF /* Build configuration list for PBXNativeTarget "CommandoakLoginHelper" */;
+			buildPhases = (
+				8B2A59AE2B8E72A700C2CAAF /* Sources */,
+				8B2A59AF2B8E72A700C2CAAF /* Frameworks */,
+				8B2A59B02B8E72A700C2CAAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommandoakLoginHelper;
+			productName = CommandoakLoginHelper;
+			productReference = 8B2A59B22B8E72A700C2CAAF /* CommandoakLoginHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8B50B1E22B8B8084006CBF57 /* Commandoak */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B50B1F42B8B8085006CBF57 /* Build configuration list for PBXNativeTarget "Commandoak" */;
@@ -90,6 +188,7 @@
 				8B50B1DF2B8B8084006CBF57 /* Sources */,
 				8B50B1E02B8B8084006CBF57 /* Frameworks */,
 				8B50B1E12B8B8084006CBF57 /* Resources */,
+				8B2A59C12B8E767900C2CAAF /* Copy Login Helper */,
 			);
 			buildRules = (
 			);
@@ -110,6 +209,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					8B2A59B12B8E72A700C2CAAF = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					8B50B1E22B8B8084006CBF57 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -129,11 +231,21 @@
 			projectRoot = "";
 			targets = (
 				8B50B1E22B8B8084006CBF57 /* Commandoak */,
+				8B2A59B12B8E72A700C2CAAF /* CommandoakLoginHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B2A59B02B8E72A700C2CAAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B2A59BC2B8E72A800C2CAAF /* Preview Assets.xcassets in Resources */,
+				8B2A59B92B8E72A800C2CAAF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B50B1E12B8B8084006CBF57 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,6 +258,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B2A59AE2B8E72A700C2CAAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B2A59C42B8E783300C2CAAF /* main.swift in Sources */,
+				8B2A59B52B8E72A700C2CAAF /* CommandoakLoginHelperAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B50B1DF2B8B8084006CBF57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +274,7 @@
 				8B50B2022B8BABD7006CBF57 /* CommandsMenuBarView.swift in Sources */,
 				8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */,
 				8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */,
+				8B2A59A72B8E5E9C00C2CAAF /* SettingsView.swift in Sources */,
 				8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */,
 				8B50B1FA2B8B93FA006CBF57 /* CommandDetailView.swift in Sources */,
 			);
@@ -161,6 +283,64 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		8B2A59BE2B8E72A800C2CAAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommandoakLoginHelper/CommandoakLoginHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommandoakLoginHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = EPU344CT68;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.jarne.CommandoakLoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8B2A59BF2B8E72A800C2CAAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CommandoakLoginHelper/CommandoakLoginHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommandoakLoginHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = EPU344CT68;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.jarne.CommandoakLoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		8B50B1F22B8B8085006CBF57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -296,6 +476,7 @@
 				INFOPLIST_FILE = Commandoak/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Commandoak;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Execute user-specified commands in the Terminal app";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,6 +509,7 @@
 				INFOPLIST_FILE = Commandoak/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Commandoak;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Execute user-specified commands in the Terminal app";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +528,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B2A59C02B8E72A800C2CAAF /* Build configuration list for PBXNativeTarget "CommandoakLoginHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2A59BE2B8E72A800C2CAAF /* Debug */,
+				8B2A59BF2B8E72A800C2CAAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8B50B1DE2B8B8084006CBF57 /* Build configuration list for PBXProject "Commandoak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

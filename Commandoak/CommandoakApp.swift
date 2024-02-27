@@ -22,13 +22,18 @@ struct CommandoakApp: App {
     }()
     
     var body: some Scene {
-        WindowGroup {
-            CommandsView()
-        }
-        .modelContainer(sharedModelContainer)
         MenuBarExtra("Commandoak", systemImage: "command") {
             CommandsMenuBarView()
                 .modelContainer(sharedModelContainer)
         }
+        Group {
+            Window("Commands", id: "commands") {
+                CommandsView()
+            }
+            Window("Settings", id: "settings") {
+                SettingsView()
+            }
+        }
+        .modelContainer(sharedModelContainer)
     }
 }

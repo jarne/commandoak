@@ -7,6 +7,8 @@ import SwiftUI
 import SwiftData
 
 struct CommandsMenuBarView: View {
+    @Environment(\.openWindow) private var openWindow
+    
     @Query private var commands: [Command]
     
     var body: some View {
@@ -16,6 +18,14 @@ struct CommandsMenuBarView: View {
             }
         }
         Divider()
+        Button("Commands") {
+            openWindow(id: "commands")
+        }
+        .keyboardShortcut("c")
+        Button("Settings") {
+            openWindow(id: "settings")
+        }
+        .keyboardShortcut("s")
         Button("Quit") {
             NSApplication.shared.terminate(self)
         }
