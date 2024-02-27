@@ -13,7 +13,7 @@ struct SettingsView: View {
     
     var body: some View {
         Form {
-            Toggle("Open on start-up", isOn: $autostart)
+            Toggle("Start on login", isOn: $autostart)
                 .onChange(of: autostart, save)
                 .padding()
         }
