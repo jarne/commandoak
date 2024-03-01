@@ -2,7 +2,7 @@ name: Build macOS app
 on: [push]
 jobs:
   build:
-    name: Build Xcode app project 
+    name: Build Xcode app project
     runs-on: macos-14
     env:
       APP_NAME: Commandoak
