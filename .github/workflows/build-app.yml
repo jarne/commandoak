@@ -1,0 +1,29 @@
+name: Build macOS app
+on: [push]
+jobs:
+  build:
+    name: Build Xcode app project 
+    runs-on: macos-latest
+    env:
+      APP_NAME: Commandoak
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode version
+        run: sudo xcode-select --switch /Applications/Xcode_15.2.app
+
+      - name: Build macOS app
+        run: |
+          xcodebuild \
+            -project ${{ env.APP_NAME }}.xcodeproj \
+            -scheme ${{ env.APP_NAME }} \
+            -configuration Release \
+            -sdk macosx \
+            archive -archivePath build/${{ env.APP_NAME }}.xcarchive
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }}
+          path: build/${{ env.APP_NAME }}.xcarchive
