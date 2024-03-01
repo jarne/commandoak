@@ -8,13 +8,13 @@ import SwiftUI
 struct CommandDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
-    
+
     var cmd: Command
-    
+
     @State private var name: String = ""
     @State private var icon: String = ""
     @State private var execute: String = ""
-    
+
     var body: some View {
         NavigationStack {
             Form {
@@ -50,17 +50,17 @@ struct CommandDetailView: View {
             .id(cmd.id)
         }
     }
-    
+
     init(cmd: Command) {
         self.cmd = cmd
     }
-    
+
     private func save() {
         cmd.name = name
         cmd.icon = icon
         cmd.execute = execute
     }
-    
+
     private func delete() {
         modelContext.delete(cmd)
     }

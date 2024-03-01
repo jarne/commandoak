@@ -10,7 +10,7 @@ import SwiftData
 struct CommandoakApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Command.self,
+            Command.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -20,7 +20,7 @@ struct CommandoakApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-    
+
     var body: some Scene {
         MenuBarExtra("Commandoak", systemImage: "command") {
             CommandsMenuBarView()

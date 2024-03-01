@@ -10,7 +10,7 @@ import OSLog
 
 struct SettingsView: View {
     @State private var autostart: Bool = false
-    
+
     var body: some View {
         Form {
             Toggle("Start on login", isOn: $autostart)
@@ -19,25 +19,25 @@ struct SettingsView: View {
         }
         .onAppear(perform: load)
     }
-    
+
     func load() {
         let service = SMAppService.loginItem(identifier: "rocks.jarne.CommandoakLoginHelper")
         let status = service.status.rawValue
-        
+
         if status == SMAppService.Status.enabled.rawValue {
             autostart = true
         } else {
             autostart = false
         }
     }
-        
+
     func save() {
         registerAutostart(enabled: autostart)
     }
-    
+
     func registerAutostart(enabled: Bool) {
         let service = SMAppService.loginItem(identifier: "rocks.jarne.CommandoakLoginHelper")
-        
+
         if enabled {
             do {
                 try service.register()
@@ -51,7 +51,7 @@ struct SettingsView: View {
                 Logger().error("Couldn't unregister login service: \(error)")
             }
         }
-        
+
         load()
     }
 }
