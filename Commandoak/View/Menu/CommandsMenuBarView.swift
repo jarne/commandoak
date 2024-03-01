@@ -12,8 +12,8 @@ struct CommandsMenuBarView: View {
     @Query private var commands: [Command]
 
     var body: some View {
-        ForEach(Array(commands.enumerated()), id: \.offset) { i, cmd in
-            self.renderCommand(i: i, cmd: cmd)
+        ForEach(Array(commands.enumerated()), id: \.offset) { index, cmd in
+            self.renderCommand(index: index, cmd: cmd)
         }
         Divider()
         Button("Commands") {
@@ -30,8 +30,8 @@ struct CommandsMenuBarView: View {
     }
 
     @ViewBuilder
-    private func renderCommand(i: Int, cmd: Command) -> some View {
-        let kbShortcut = findKBShortcutForI(i: i)
+    private func renderCommand(index: Int, cmd: Command) -> some View {
+        let kbShortcut = findKBShortcutForI(index: index)
 
         if kbShortcut != nil {
             Button("\(cmd.icon) \(cmd.name)") {
@@ -45,8 +45,8 @@ struct CommandsMenuBarView: View {
         }
     }
 
-    private func findKBShortcutForI(i: Int) -> KeyboardShortcut? {
-        switch i {
+    private func findKBShortcutForI(index: Int) -> KeyboardShortcut? {
+        switch index {
         case 0:
             return KeyboardShortcut("1")
         case 1:
@@ -79,7 +79,13 @@ struct CommandsMenuBarView: View {
 
         let conf = NSWorkspace.OpenConfiguration()
 
-        let event = NSAppleEventDescriptor(eventClass: kAECoreSuite, eventID: kAEDoScript, targetDescriptor: nil, returnID: AEReturnID(kAutoGenerateReturnID), transactionID: AETransactionID(kAnyTransactionID))
+        let event = NSAppleEventDescriptor(
+            eventClass: kAECoreSuite,
+            eventID: kAEDoScript,
+            targetDescriptor: nil,
+            returnID: AEReturnID(kAutoGenerateReturnID),
+            transactionID: AETransactionID(kAnyTransactionID)
+        )
         event.setParam(NSAppleEventDescriptor(string: command), forKeyword: keyDirectObject)
         conf.appleEvent = event
 
