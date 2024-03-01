@@ -1,0 +1,33 @@
+name: Build macOS app
+on: [push]
+jobs:
+  build:
+    name: Build Xcode app project
+    runs-on: macos-14
+    env:
+      APP_NAME: Commandoak
+      XCODE_VERSION: 15.2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode version
+        run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+
+      - name: Build macOS app
+        run: |
+          xcodebuild \
+            -project ${{ env.APP_NAME }}.xcodeproj \
+            -scheme ${{ env.APP_NAME }} \
+            -configuration Release \
+            -sdk macosx \
+            archive -archivePath build/${{ env.APP_NAME }}.xcarchive CODE_SIGNING_ALLOWED=NO
+
+      - name: Create ZIP of build output
+        run: zip -r build-out.zip build
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }} build output
+          path: build-out.zip
