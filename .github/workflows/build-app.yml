@@ -26,5 +26,5 @@ jobs:
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.APP_NAME }}
-          path: build/${{ env.APP_NAME }}.xcarchive
+          name: ${{ env.APP_NAME }} build output
+          path: build
