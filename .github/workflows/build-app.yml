@@ -21,7 +21,7 @@ jobs:
             -scheme ${{ env.APP_NAME }} \
             -configuration Release \
             -sdk macosx \
-            archive -archivePath build/${{ env.APP_NAME }}.xcarchive
+            archive -archivePath build/${{ env.APP_NAME }}.xcarchive CODE_SIGNING_ALLOWED=NO
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
