@@ -3,15 +3,16 @@ on: [push]
 jobs:
   build:
     name: Build Xcode app project 
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
       APP_NAME: Commandoak
+      XCODE_VERSION: 15.2
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Select Xcode version
-        run: sudo xcode-select --switch /Applications/Xcode_15.2.app
+        run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
 
       - name: Build macOS app
         run: |
