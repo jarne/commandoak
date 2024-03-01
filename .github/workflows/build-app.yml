@@ -24,10 +24,10 @@ jobs:
             archive -archivePath build/${{ env.APP_NAME }}.xcarchive CODE_SIGNING_ALLOWED=NO
 
       - name: Create ZIP of build output
-        run: zip -r build.zip build
+        run: zip -r build-out.zip build
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.APP_NAME }} build output
-          path: build.zip
+          path: build-out.zip
