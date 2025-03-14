@@ -40,7 +40,7 @@ jobs:
       APP_NAME: Commandoak
     permissions:
       id-token: write
-      contents: read
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
