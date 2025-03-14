@@ -31,3 +31,31 @@ jobs:
         with:
           name: ${{ env.APP_NAME }} build output
           path: build-out.zip
+  release:
+    name: Create release for app
+    if: github.ref_type == 'tag'
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      APP_NAME: Commandoak
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Restore build output
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }} build output
+          path: build-out.zip
+      
+      - name: Rename release file
+        run: mv build-out.zip ${{ env.APP_NAME }}.zip
+
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "${{ env.APP_NAME }}.zip"
+          tag: ${{ github.ref_name }}
