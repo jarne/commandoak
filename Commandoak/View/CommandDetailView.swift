@@ -25,6 +25,7 @@ struct CommandDetailView: View {
                 TextField("Command", text: $execute)
                     .padding()
             }
+            .textFieldStyle(.roundedBorder)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
