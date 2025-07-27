@@ -21,10 +21,12 @@ struct CommandDetailView: View {
                 TextField("Name", text: $name)
                     .padding()
                 TextField("Icon", text: $icon)
-                    .padding()
-                TextField("Command", text: $execute)
+                    .onChange(of: icon) { _, newState in
+                        self.icon = String(newState.prefix(1))
+                    }
                     .padding()
             }
+            .textFieldStyle(.roundedBorder)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
@@ -48,6 +50,13 @@ struct CommandDetailView: View {
                 execute = cmd.execute
             }
             .id(cmd.id)
+            VStack(alignment: .leading) {
+                Text("Command")
+                TextEditor(text: $execute)
+                    .font(.system(.body, design: .monospaced))
+                    .frame(height: 100)
+            }
+            .padding()
         }
     }
 
