@@ -43,14 +43,14 @@ struct CommandsView: View {
             modelContext.insert(newCmd)
         }
     }
-    
+
     private func moveItems(from source: IndexSet, to destination: Int) {
         withAnimation {
             var sortedCommands = commands
             sortedCommands.move(fromOffsets: source, toOffset: destination)
-            
-            for (i, cmd) in sortedCommands.enumerated() {
-                cmd.position = i
+
+            for (index, cmd) in sortedCommands.enumerated() {
+                cmd.position = index
             }
         }
     }
