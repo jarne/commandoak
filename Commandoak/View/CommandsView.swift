@@ -8,7 +8,7 @@ import SwiftData
 
 struct CommandsView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var commands: [Command]
+    @Query(sort: \Command.position) private var commands: [Command]
 
     var body: some View {
         NavigationSplitView {
@@ -21,6 +21,7 @@ struct CommandsView: View {
                         Text(cmd.name)
                     }
                 }
+                .onMove(perform: moveItems)
                 .onDelete(perform: deleteItems)
             }
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
@@ -38,12 +39,23 @@ struct CommandsView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Command()
-            modelContext.insert(newItem)
+            let newCmd = Command(position: commands.count)
+            modelContext.insert(newCmd)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func moveItems(from source: IndexSet, to destination: Int) {
+        withAnimation {
+            var sortedCommands = commands
+            sortedCommands.move(fromOffsets: source, toOffset: destination)
+
+            for (index, cmd) in sortedCommands.enumerated() {
+                cmd.position = index
+            }
+        }
+    }
+
+    private func deleteItems(at offsets: IndexSet) {
         withAnimation {
             for index in offsets {
                 modelContext.delete(commands[index])

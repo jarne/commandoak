@@ -9,7 +9,7 @@ import SwiftData
 struct CommandsMenuBarView: View {
     @Environment(\.openWindow) private var openWindow
 
-    @Query private var commands: [Command]
+    @Query(sort: \Command.position) private var commands: [Command]
 
     var body: some View {
         ForEach(Array(commands.enumerated()), id: \.offset) { index, cmd in
