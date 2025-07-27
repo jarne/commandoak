@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Commandoak</h1>
-<p align="center">Menu bar app for one-click execution of terminal commands</p>
+<p align="center">Menu bar app for executing terminal commands with one click</p>
 
 <br>
 
@@ -36,17 +36,18 @@ Say goodbye to tedious typing and hello to efficiency with Commandoak – your t
 
 ## 🖥 Usage
 
-The latest version of this app can be downloaded and installed from the releases page.
+The latest version of the app can be downloaded and installed from the releases page.
 
-Once started, you can start creating commands in the settings window and define a name, an emoji shortcut
+Once started, you can begin creating commands in the settings window and define a name, an emoji shortcut
 and the command to execute.
-They will appear in the menu bar and clicking them will execute the underlying command in a new Terminal window.
+These commands will then appear in the menu bar, and clicking on them will execute
+the underlying command in a new Terminal window.
 
 ## 🧑‍💻 Development
 
-Commandoak is a native app written in Swift and SwiftUI.
+Commandoak is a native macOS app developed using Swift and SwiftUI.
 It uses SwiftData to store the defined commands.
-Due to its simplicty, no dependencies are required and the app can just be built as an Xcode project.
+Thanks to its simplicity, no dependencies are required and the app can just be built as an Xcode project.
 
 ## 🙋‍ Contribution
 
