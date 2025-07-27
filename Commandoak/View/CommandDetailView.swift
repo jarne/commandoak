@@ -22,8 +22,6 @@ struct CommandDetailView: View {
                     .padding()
                 TextField("Icon", text: $icon)
                     .padding()
-                TextField("Command", text: $execute)
-                    .padding()
             }
             .textFieldStyle(.roundedBorder)
             .toolbar {
@@ -49,6 +47,13 @@ struct CommandDetailView: View {
                 execute = cmd.execute
             }
             .id(cmd.id)
+            VStack(alignment: .leading) {
+                Text("Command")
+                TextEditor(text: $execute)
+                    .font(.system(.body, design: .monospaced))
+                    .frame(height: 100)
+            }
+            .padding()
         }
     }
 
