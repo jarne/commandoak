@@ -21,6 +21,9 @@ struct CommandDetailView: View {
                 TextField("Name", text: $name)
                     .padding()
                 TextField("Icon", text: $icon)
+                    .onChange(of: icon) { _, newState in
+                        self.icon = String(newState.prefix(1))
+                    }
                     .padding()
             }
             .textFieldStyle(.roundedBorder)
