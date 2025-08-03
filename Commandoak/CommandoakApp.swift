@@ -12,7 +12,8 @@ struct CommandoakApp: App {
         let schema = Schema([
             Command.self
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        let fileUrl = URL.applicationSupportDirectory.appending(path: "Commandoak/commands.store")
+        let modelConfiguration = ModelConfiguration("Commands", schema: schema, url: fileUrl)
 
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
