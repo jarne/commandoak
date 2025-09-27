@@ -26,7 +26,7 @@ struct CommandsView: View {
             }
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
             .toolbar {
-                ToolbarItem {
+                ToolbarItem(placement: .principal) {
                     Button(action: addItem) {
                         Label("Add command", systemImage: "plus")
                     }

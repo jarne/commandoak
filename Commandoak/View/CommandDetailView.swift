@@ -35,7 +35,7 @@ struct CommandDetailView: View {
                         }
                     }
                 }
-                ToolbarItem(placement: .cancellationAction) {
+                ToolbarItem(placement: .destructiveAction) {
                     Button("Delete") {
                         withAnimation {
                             delete()
