@@ -11,7 +11,7 @@
     <a href="https://github.com/jarne/commandoak">
         <img src="https://img.shields.io/badge/language-Swift-orange" alt="Written in Swift">
     </a>
-    <a href="https://github.com/jarne/commandoak/blob/master/LICENSE">
+    <a href="https://github.com/jarne/commandoak/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/jarne/commandoak.svg" alt="License">
     </a>
 </p>
@@ -64,4 +64,4 @@ Thanks for your interest 🎉👍!
 
 ## 👨‍⚖️ License
 
-[MIT](https://github.com/jarne/commandoak/blob/master/LICENSE)
+[MIT](https://github.com/jarne/commandoak/blob/main/LICENSE)
