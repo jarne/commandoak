@@ -13,3 +13,15 @@ jobs:
 
       - name: Run lint command
         run: swiftlint lint
+  codestyle:
+    name: Run SwiftFormat
+    runs-on: macos-26
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install SwiftFormat
+        run: brew install swiftformat
+
+      - name: Run style lint command
+        run: swiftformat --lint .
