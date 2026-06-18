@@ -6,7 +6,7 @@ jobs:
     runs-on: macos-26
     env:
       APP_NAME: Commandoak
-      XCODE_VERSION: 26.0
+      XCODE_VERSION: 26.5
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
