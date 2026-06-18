@@ -49,7 +49,7 @@ Commandoak is a native macOS app developed using Swift and SwiftUI.
 It uses SwiftData to store the defined commands.
 Thanks to its simplicity, no dependencies are required and the app can just be built as an Xcode project.
 
-Before comitting code, two mandatory checks need to be executed:
+Before committing code, two mandatory checks need to be executed:
 
 Lint code using SwiftLint: `swiftlint lint .`  
 Format code style using SwiftFormat: `swiftformat .`
