@@ -49,6 +49,13 @@ Commandoak is a native macOS app developed using Swift and SwiftUI.
 It uses SwiftData to store the defined commands.
 Thanks to its simplicity, no dependencies are required and the app can just be built as an Xcode project.
 
+Before comitting code, two mandatory checks need to be executed:
+
+Lint code using SwiftLint: `swiftlint lint .`  
+Format code style using SwiftFormat: `swiftformat .`
+
+Both tools can be installed using [Homebrew](https://brew.sh) (`brew install swiftlint` and `brew install swiftformat`), as done in the [CI pipelines](https://github.com/jarne/commandoak/blob/main/.github/workflows/lint-code.yml).
+
 ## 🙋‍ Contribution
 
 Contributions are always very welcome! It's completely equal if you're a beginner or a more experienced developer.
