@@ -6,10 +6,10 @@
 import Cocoa
 
 class CommandoakLoginHelperAppDelegate: NSObject, NSApplicationDelegate {
-    func applicationDidFinishLaunching(_ notification: Notification) {
+    func applicationDidFinishLaunching(_: Notification) {
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = runningApps.contains { app in
-            return app.bundleIdentifier == "rocks.jarne.Commandoak"
+            app.bundleIdentifier == "rocks.jarne.Commandoak"
         }
 
         if isRunning {

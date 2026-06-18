@@ -3,10 +3,10 @@
 //  Commandoak
 //
 
-import SwiftUI
-import SwiftData
-import ServiceManagement
 import OSLog
+import ServiceManagement
+import SwiftData
+import SwiftUI
 
 struct SettingsView: View {
     @State private var autostart: Bool = false

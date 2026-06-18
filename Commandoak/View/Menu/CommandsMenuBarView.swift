@@ -3,8 +3,8 @@
 //  Commandoak
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct CommandsMenuBarView: View {
     @Environment(\.openWindow) private var openWindow
