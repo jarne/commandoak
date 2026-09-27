@@ -3,10 +3,10 @@ on: [push]
 jobs:
   build:
     name: Build Xcode app project
-    runs-on: macos-26
+    runs-on: macos-27
     env:
       APP_NAME: Commandoak
-      XCODE_VERSION: 26.5
+      XCODE_VERSION: 27.0
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

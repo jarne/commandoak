@@ -3,7 +3,7 @@ on: [push]
 jobs:
   lint:
     name: Run SwiftLint
-    runs-on: macos-26
+    runs-on: macos-27
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -15,7 +15,7 @@ jobs:
         run: swiftlint lint
   codestyle:
     name: Run SwiftFormat
-    runs-on: macos-26
+    runs-on: macos-27
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
