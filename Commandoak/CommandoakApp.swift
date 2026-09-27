@@ -10,7 +10,7 @@ import SwiftUI
 struct CommandoakApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Command.self,
+            Command.self
         ])
         let fileUrl = URL.applicationSupportDirectory.appending(path: "Commandoak/commands.store")
         let modelConfiguration = ModelConfiguration("Commands", schema: schema, url: fileUrl)
