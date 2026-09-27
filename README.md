@@ -25,7 +25,8 @@
 Introducing Commandoak, your macOS app for streamlined command execution! 🚀
 Define your commands with emojis and names, then effortlessly execute them in a new, interactive default Terminal window.
 From routine updates to SSH connections, Commandoak simplifies your workflow with its intuitive menu bar interface.
-Whether you're a developer, sysadmin, or Mac enthusiast, Commandoak empowers you to execute common commands effortlessly.
+Whether you're a developer, sysadmin, or Mac enthusiast, Commandoak empowers you to execute common commands effortlessly
+in your preferred terminal.
 Say goodbye to tedious typing and hello to efficiency with Commandoak – your trusted terminal companion!
 
 ### Screenshots
@@ -43,10 +44,12 @@ and the command to execute.
 These commands will then appear in the menu bar, and clicking on them will execute
 the underlying command in a new Terminal window.
 
+Currently supported terminals are the System Terminal shipped with macOS and [Ghostty](https://github.com/ghostty-org/ghostty).
+
 ## 🧑‍💻 Development
 
 Commandoak is a native macOS app developed using Swift and SwiftUI.
-It uses SwiftData to store the defined commands.
+It uses SwiftData to store the defined commands, and UserDefaults to store user settings.
 Thanks to its simplicity, no dependencies are required and the app can just be built as an Xcode project.
 
 Before committing code, two mandatory checks need to be executed:
