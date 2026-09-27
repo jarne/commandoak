@@ -3,6 +3,7 @@
 //  Commandoak
 //
 
+import SwiftData
 import SwiftUI
 
 struct CommandDetailView: View {
