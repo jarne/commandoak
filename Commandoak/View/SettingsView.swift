@@ -10,13 +10,20 @@ import SwiftUI
 
 struct SettingsView: View {
     @State private var autostart: Bool = false
+    @AppStorage(AppSettings.terminalAppKey) private var terminalApp: TerminalApp = AppSettings.defaultTerminalApp
 
     var body: some View {
         Form {
             Toggle("Start on login", isOn: $autostart)
                 .onChange(of: autostart, save)
-                .padding()
+                .padding(.bottom, 8)
+            Picker("Terminal", selection: $terminalApp) {
+                ForEach(TerminalApp.allCases) { app in
+                    Text(app.displayName).tag(app)
+                }
+            }
         }
+        .padding()
         .onAppear(perform: load)
     }
 
