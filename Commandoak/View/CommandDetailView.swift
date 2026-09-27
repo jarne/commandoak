@@ -23,7 +23,7 @@ struct CommandDetailView: View {
                     .padding()
                 TextField("Icon", text: $icon)
                     .onChange(of: icon) { _, newState in
-                        self.icon = String(newState.prefix(1))
+                        icon = String(newState.prefix(1))
                     }
                     .padding()
             }

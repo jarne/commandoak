@@ -16,9 +16,9 @@ enum TerminalApp: String, CaseIterable, Identifiable {
     var displayName: String {
         switch self {
         case .appleTerminal:
-            return "Apple Terminal"
+            "Apple Terminal"
         case .ghostty:
-            return "Ghostty"
+            "Ghostty"
         }
     }
 }

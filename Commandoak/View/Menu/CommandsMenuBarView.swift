@@ -13,7 +13,7 @@ struct CommandsMenuBarView: View {
 
     var body: some View {
         ForEach(Array(commands.enumerated()), id: \.offset) { index, cmd in
-            self.renderCommand(index: index, cmd: cmd)
+            renderCommand(index: index, cmd: cmd)
         }
         Divider()
         Button("Commands") {
@@ -48,25 +48,25 @@ struct CommandsMenuBarView: View {
     private func findKBShortcutForI(index: Int) -> KeyboardShortcut? {
         switch index {
         case 0:
-            return KeyboardShortcut("1")
+            KeyboardShortcut("1")
         case 1:
-            return KeyboardShortcut("2")
+            KeyboardShortcut("2")
         case 2:
-            return KeyboardShortcut("3")
+            KeyboardShortcut("3")
         case 3:
-            return KeyboardShortcut("4")
+            KeyboardShortcut("4")
         case 4:
-            return KeyboardShortcut("5")
+            KeyboardShortcut("5")
         case 5:
-            return KeyboardShortcut("6")
+            KeyboardShortcut("6")
         case 6:
-            return KeyboardShortcut("7")
+            KeyboardShortcut("7")
         case 7:
-            return KeyboardShortcut("8")
+            KeyboardShortcut("8")
         case 8:
-            return KeyboardShortcut("9")
+            KeyboardShortcut("9")
         default:
-            return nil
+            nil
         }
     }
 }
