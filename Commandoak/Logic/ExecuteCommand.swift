@@ -8,20 +8,16 @@ import Foundation
 
 class ExecuteCommand {
     static func runCommand(command: String) {
-        let terminalAppBundleIdentifier = "com.mitchellh.ghostty" // TODO: change to setting value
-
-        switch terminalAppBundleIdentifier {
-        case "com.apple.Terminal":
+        switch AppSettings.terminalApp {
+        case .appleTerminal:
             runCommandInSystemTerminal(command: command)
-        case "com.mitchellh.ghostty":
+        case .ghostty:
             runCommandInGhostty(command: command)
-        default:
-            print("Invalid terminal application bundle identifier")
         }
     }
 
     private static func runCommandInSystemTerminal(command: String) {
-        guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.apple.Terminal") else {
+        guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: TerminalApp.appleTerminal.id) else {
             print("Cannot find Terminal application")
             return
         }
@@ -46,7 +42,7 @@ class ExecuteCommand {
     }
 
     private static func runCommandInGhostty(command: String) {
-        guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.mitchellh.ghostty") else {
+        guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: TerminalApp.ghostty.id) else {
             print("Cannot find Ghostty application")
             return
         }

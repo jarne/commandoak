@@ -15,6 +15,7 @@
 		8B2A59C42B8E783300C2CAAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A59C32B8E783300C2CAAF /* main.swift */; };
 		8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */; };
 		8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E82B8B8084006CBF57 /* CommandsView.swift */; };
+		8B3A0C012F0000000000A001 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A0C022F0000000000A002 /* AppSettings.swift */; };
 		8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1EA2B8B8084006CBF57 /* Command.swift */; };
 		8B50B1ED2B8B8085006CBF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */; };
 		8B50B1F02B8B8085006CBF57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		8B50B1E32B8B8084006CBF57 /* Commandoak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commandoak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandoakApp.swift; sourceTree = "<group>"; };
 		8B50B1E82B8B8084006CBF57 /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
+		8B3A0C022F0000000000A002 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		8B50B1EA2B8B8084006CBF57 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		8B2A59A32B8E5E4800C2CAAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B3A0C022F0000000000A002 /* AppSettings.swift */,
 				8B50B1EA2B8B8084006CBF57 /* Command.swift */,
 			);
 			path = Model;
@@ -285,6 +288,7 @@
 			files = (
 				8B50B2022B8BABD7006CBF57 /* CommandsMenuBarView.swift in Sources */,
 				8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */,
+				8B3A0C012F0000000000A001 /* AppSettings.swift in Sources */,
 				8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */,
 				8B2A59A72B8E5E9C00C2CAAF /* SettingsView.swift in Sources */,
 				8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */,
