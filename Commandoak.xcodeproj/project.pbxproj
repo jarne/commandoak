@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -57,6 +57,10 @@
 		8B50B2032B8BB4DC006CBF57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8B89EDFF2FE8076D0030F39D /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8B2DDED130696C2600010840 /* Logic */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logic; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8B2A59AF2B8E72A700C2CAAF /* Frameworks */ = {
@@ -146,6 +150,7 @@
 			children = (
 				8B50B2032B8BB4DC006CBF57 /* Info.plist */,
 				8B2A59A32B8E5E4800C2CAAF /* Model */,
+				8B2DDED130696C2600010840 /* Logic */,
 				8B2A59A42B8E5E5200C2CAAF /* View */,
 				8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */,
 				8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */,
@@ -196,6 +201,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8B2DDED130696C2600010840 /* Logic */,
 			);
 			name = Commandoak;
 			productName = Commandoak;
