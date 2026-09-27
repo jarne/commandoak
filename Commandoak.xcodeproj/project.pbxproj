@@ -13,9 +13,9 @@
 		8B2A59BC2B8E72A800C2CAAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2A59BB2B8E72A800C2CAAF /* Preview Assets.xcassets */; };
 		8B2A59C22B8E769E00C2CAAF /* CommandoakLoginHelper.app in Copy Login Helper */ = {isa = PBXBuildFile; fileRef = 8B2A59B22B8E72A700C2CAAF /* CommandoakLoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8B2A59C42B8E783300C2CAAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A59C32B8E783300C2CAAF /* main.swift */; };
+		8B3A0C012F0000000000A001 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A0C022F0000000000A002 /* AppSettings.swift */; };
 		8B50B1E72B8B8084006CBF57 /* CommandoakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */; };
 		8B50B1E92B8B8084006CBF57 /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1E82B8B8084006CBF57 /* CommandsView.swift */; };
-		8B3A0C012F0000000000A001 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A0C022F0000000000A002 /* AppSettings.swift */; };
 		8B50B1EB2B8B8084006CBF57 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50B1EA2B8B8084006CBF57 /* Command.swift */; };
 		8B50B1ED2B8B8085006CBF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */; };
 		8B50B1F02B8B8085006CBF57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */; };
@@ -46,10 +46,10 @@
 		8B2A59BB2B8E72A800C2CAAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B2A59BD2B8E72A800C2CAAF /* CommandoakLoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommandoakLoginHelper.entitlements; sourceTree = "<group>"; };
 		8B2A59C32B8E783300C2CAAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8B3A0C022F0000000000A002 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		8B50B1E32B8B8084006CBF57 /* Commandoak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commandoak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B50B1E62B8B8084006CBF57 /* CommandoakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandoakApp.swift; sourceTree = "<group>"; };
 		8B50B1E82B8B8084006CBF57 /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
-		8B3A0C022F0000000000A002 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		8B50B1EA2B8B8084006CBF57 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		8B50B1EC2B8B8085006CBF57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B50B1EF2B8B8085006CBF57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -505,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 0.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.jarne.Commandoak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 0.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.jarne.Commandoak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
