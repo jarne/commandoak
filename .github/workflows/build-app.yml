@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
     name: Build Xcode app project
-    runs-on: macos-27
+    runs-on: xcode-27
     env:
       APP_NAME: Commandoak
       XCODE_VERSION: 27.0
